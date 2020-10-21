@@ -1,0 +1,17 @@
+--- a/src/sphinxstd.cpp
++++ b/src/sphinxstd.cpp
+@@ -1498,14 +1498,6 @@
+ 		if ( !bOk )
+ 			break;
+ 
+-		bOk = ( pthread_rwlockattr_setkind_np ( &tAttr, PTHREAD_RWLOCK_PREFER_WRITER_NONRECURSIVE_NP )==0 );
+-		assert ( bOk );
+-		if ( !bOk )
+-		{
+-			pthread_rwlockattr_destroy ( &tAttr );
+-			break;
+-		}
+-
+ 		pAttr = &tAttr;
+ 		break;
+ 	}
