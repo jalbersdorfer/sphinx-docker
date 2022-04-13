@@ -4,7 +4,7 @@ MAINTAINER jalbersdorfer <jalbersdorfer@gmail.com>
 
 COPY ./sphinx-alpine.patch /tmp/sphinx-alpine.patch
 
-RUN apk add gcc g++ make libc-dev mariadb-dev \
+RUN apk add gcc g++ make libc-dev mariadb-dev patch \
     && cd /tmp \
     && mkdir -p /var/data \
     && wget http://sphinxsearch.com/files/sphinx-2.3.2-beta.tar.gz \
